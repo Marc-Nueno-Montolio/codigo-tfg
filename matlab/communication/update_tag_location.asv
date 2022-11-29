@@ -1,0 +1,8 @@
+function [] = update_tag_location(id)
+    odomSub = rossubscriber('/odom');
+    msg = receive(odomSub);
+    position = [msg.Pose.Pose.Position.X msg.Pose.Pose.Position.Y msg.Pose.Pose.Position.Z]
+
+    disp(['Tag '  id  'position updated to: ' sprintf() ])
+end
+
