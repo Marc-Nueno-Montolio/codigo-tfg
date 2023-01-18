@@ -1,9 +1,9 @@
-import os
-os.environ['ROS_MASTER_URI'] = 'http://10.4.38.9:11311'
-os.environ['ROS_IP'] = '10.4.38.11'
-
 #!/usr/bin/env python
-# license removed for brevity
+import os, time, logging
+os.environ['ROS_MASTER_URI'] = 'http://172.20.10.2:11311'
+os.environ['ROS_MASTER_IP'] = '172.20.10.2'
+os.environ['ROS_IP'] = '172.20.10.4'
+
 import rospy
 from std_msgs.msg import String
 

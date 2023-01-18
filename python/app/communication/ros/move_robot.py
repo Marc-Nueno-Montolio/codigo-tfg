@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
-import os, time
-os.environ['ROS_MASTER_URI'] = 'http://10.4.38.11:11311'
-os.environ['ROS_MASTER_IP'] = '10.4.38.11'
-os.environ['ROS_IP'] = '10.4.38.9'
+import os, time, logging
+os.environ['ROS_MASTER_URI'] = 'http://172.20.10.2:11311'
+os.environ['ROS_MASTER_IP'] = '172.20.10.2'
+os.environ['ROS_IP'] = '172.20.10.4'
 
 #!/usr/bin/env python
 import rospy
 from geometry_msgs.msg import Twist
 
 class RobotController:
-    #rospy.init_node('robot_controller', anonymous=True)
+    rospy.init_node('robot_controller', anonymous=True)
     def __init__(self):
         self.velocity_publisher = rospy.Publisher('/cmd_vel', Twist, queue_size=10)
         self.velocity = 0.5
@@ -69,4 +69,4 @@ class RobotController:
 if __name__ == '__main__':
     rc = RobotController()
     time.sleep(1)
-    rc.move()
+    rc.moveUp()

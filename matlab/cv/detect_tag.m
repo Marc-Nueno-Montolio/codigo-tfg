@@ -1,5 +1,3 @@
-
-
 function [I] = detect_tag(I)
 warning('off','all')
     %I = imread("aprilTagsMulti.jpg");
@@ -40,9 +38,6 @@ warning('off','all')
                 end
             end
     end
-
-    
-    
 end
 
 

@@ -7,7 +7,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtWidgets import QTreeView
 from PyQt5.Qt import QStandardItemModel, QStandardItem
 
-base_dir = os.path.join(os.getcwd(), 'app', 'gui')
+base_dir = os.path.join(os.getcwd(), os.pardir)
 print(base_dir)
 OBJECTIVES_ICON = os.path.join(base_dir,'assets/box_icon.webp')
 ITEM_ICON = os.path.join(base_dir,'assets/gear_icon.webp')

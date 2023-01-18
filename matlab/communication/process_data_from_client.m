@@ -19,6 +19,7 @@ function [] = process_data(data)
     elseif command == "update_planner"
         PRM
     else
+        % ToDo: Implement All commands
         disp('Comando no reconocido')
         disp(data)
     end

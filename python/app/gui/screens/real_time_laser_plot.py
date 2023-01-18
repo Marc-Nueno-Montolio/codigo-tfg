@@ -1,12 +1,12 @@
 import json
 import os
 
-os.environ['ROS_MASTER_URI'] = 'http://10.4.38.11:11311'
-os.environ['ROS_MASTER_IP'] = '10.4.38.11'
-os.environ['ROS_IP'] = '10.4.38.10'
+os.environ['ROS_MASTER_URI'] = 'http://10.4.38.13:11311'
+os.environ['ROS_MASTER_IP'] = '10.4.38.13'
+os.environ['ROS_IP'] = '10.4.38.7'
 
 import matplotlib
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import numpy as np
@@ -22,9 +22,9 @@ class Visualiser:
 
     def __init__(self):
         self.fig, self.ax = plt.subplots(subplot_kw={'projection': 'polar'})
-        mgr = plt.get_current_fig_manager()
-        mgr.window.wm_geometry("+0+0") # move the window
-        mgr.window.title("Monitor Laser en tiempo real")
+        #mgr = plt.get_current_fig_manager()
+        #mgr.window.wm_geometry("+0+0") # move the window
+        #mgr.window.title("Monitor Laser en tiempo real")
 
         self.fig.set_size_inches(4, 4, forward=True)
 

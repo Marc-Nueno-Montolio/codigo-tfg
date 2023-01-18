@@ -24,7 +24,7 @@ class App(QWidget):
         self.top = 10
         self.width = 640
         self.height = 240
-        self.crud = rest_client.apiClient()
+        #self.crud = rest_client.apiClient()
         self.initUI()
         
     def initUI(self):
@@ -42,9 +42,6 @@ class App(QWidget):
         
         model = self.createStockItemModel(self)
         self.dataView.setModel(model)
-
-
-        
 
         mainLayout = QVBoxLayout()
         mainLayout.addWidget(self.dataGroupBox)

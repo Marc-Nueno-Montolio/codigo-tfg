@@ -1,11 +1,11 @@
-import_variables
+
 
 % Configure Window
 plannerWindow = figure('Name', 'Planificador Hybrid A*Grid', 'NumberTitle','off');
 disp('Planning using Hybrid A*Grid Planner')
 
 % Convert to binary Occupancy Map
-binMap = to_binary_occupancy_map(myOccMap);
+binMap = map;
 
 % Inflate the map to avoid collisions
 robotRadius = 0.02;
@@ -21,8 +21,8 @@ sv.Map = inflatedMap;
 planner = plannerHybridAStar(sv, MinTurningRadius=1, MotionPrimitiveLength=1);
 
 % Plan path
-startPose = [0 0 0]; % [meters, meters, radians]
-goalPose = [-4 4 0];
+startPose = [origin 0]; % [meters, meters, radians]
+goalPose = [goal 0];
 
 path = plan(planner,startPose,goalPose,SearchMode='exhaustive');     
 

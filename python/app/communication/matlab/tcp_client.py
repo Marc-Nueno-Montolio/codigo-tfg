@@ -3,7 +3,7 @@ import json,socket, base64
 class MatlabClient():
     def __init__(self, port):
         self.host = '127.0.0.1'
-        self.port = 5050
+        self.port = 5000
         self.s = socket.socket()
         print(f"Created Socket on {self.host}:{self.port}")
         

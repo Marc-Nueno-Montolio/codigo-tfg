@@ -31,15 +31,3 @@ function [] = video_detector
 
 
 end
-
-
-
-
-
-
-
-
-
-
-
-

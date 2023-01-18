@@ -6,7 +6,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtCore import QObject, QThread, QThreadPool, pyqtSignal
 
 import matplotlib
-matplotlib.use('TkAgg')
+#matplotlib.use('TkAgg')
 
 from .callbacks import *
 from ..config import config

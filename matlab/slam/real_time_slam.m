@@ -50,15 +50,3 @@ function slamAlg = real_time_slam
     save('./workspace/slam','slamAlg')
 
 end
-
-
-
-
-
-
-
-
-
-
-
-
